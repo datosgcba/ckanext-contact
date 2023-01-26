@@ -14,21 +14,21 @@
             {% block contact_form_legend %}
                 <legend>
                     {% block contact_form_legend_content %}
-                        {{ _('Questions? Comments? We are always glad to hear from you!') }}
+                        {{ _('Consulta sobre este Dataset') }}
                     {% endblock %}
                 </legend>
             {% endblock %}
             {% block contact_form_fields %}
-                {{ form.input('name', label=_('Contact Name'), id='field-name', value=data.name,
+                {{ form.input('name', label=_('Area / Organización'), id='field-name', value=data.name,
                               error=errors.name, classes=['control-medium'], is_required=true) }}
 
                 {{ form.input('email', label=_('Email'), id='field-email', type='email',
                               value=data.email, error=errors.email, classes=['control-medium'],
                               is_required=true) }}
 
-                {{ form.markdown('content', label=_('Your Request'), id='field-content',
+                {{ form.markdown('content', label=_('Su solicitud'), id='field-content',
                                  value=data.content, error=errors.content,
-                                 placeholder=_('What do you have to tell us?'), is_required=true) }}
+                                 placeholder=_('¿En que te podemos ayudar?'), is_required=true) }}
             {% endblock %}
         </fieldset>
 
